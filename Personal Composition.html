@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Input Control</title>
+  </head>
+
+  <body>
+    <form>
+      First name: <input type="text" name="first_name" />
+      <br />
+      Last name: <input type="text" name="last_name" />
+      <br />
+      <br />
+    </form>
+    <button onclick="submitFunction()">Submit</button>
+
+    <p></p>
+  </body>
+
+  <script>
+    //  select input fields
+    const inp = document.querySelector("input");
+
+    //  add event listener for mouseover to the input fields
+    // and change backgroundColor to yellow
+    inp.addEventListener("mouseenter", function () {
+      inp.style.backgroundColor = "yellow";
+    });
+
+    // change background color to white again after mouse leaves
+    inp.addEventListener("mouseleave", function () {
+      inp.style.backgroundColor = "white";
+    });
+
+    // add a greeting message into html paragraph element
+    function submitFunction() {
+      // paragraph element
+      const para = document.querySelector("p");
+
+//get input value from name and add it to paragraph element
+      para.innerHTML = "Hi! " + inp.value;
+    }
+  </script>
+</html>
